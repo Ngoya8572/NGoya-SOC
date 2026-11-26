@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sign in · NGoya SOC</title><link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"></head>
+<body class="login-page"><form class="login-card" method="post"><div class="brand centered"><span class="brand-icon">N</span><div><b>NGoya SOC</b><small>SECURITY OPERATIONS</small></div></div>
+<p class="eyebrow">AUTHENTICATED ACCESS</p><h1>Welcome back</h1><p class="muted">Sign in to your local security monitoring console.</p>
+<label>Username<input name="username" required autocomplete="username" placeholder="admin"></label>
+<label>Password<input name="password" type="password" required autocomplete="current-password" placeholder="Enter password"></label>
+{% with messages = get_flashed_messages(with_categories=true) %}{% for category,message in messages %}<div class="flash error">{{ message }}</div>{% endfor %}{% endwith %}
+<button class="primary full">Sign in <span>→</span></button><p class="login-hint">First login: admin / ChangeMe123!</p><p class="login-hint">Change the default password before using this beyond your private lab.</p></form></body></html>
