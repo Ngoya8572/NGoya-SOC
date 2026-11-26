@@ -27,7 +27,8 @@ APP_DIR = os.path.dirname(os.path.abspath(__file__))
 IS_RAILWAY = bool(
     os.environ.get("RAILWAY_PROJECT_ID")
     or os.environ.get("RAILWAY_ENVIRONMENT")
-)
+    or os.environ.get("RENDER")
+)s
 
 DB_PATH = os.environ.get(
     "SOC_DB_PATH",
